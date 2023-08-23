@@ -1,19 +1,3 @@
-/* # Cores 
-
-cinza: #f7f7f7
-cinza-escuro: #c6c6c6
-vermelho: #ee2211
-
-# Tipografia 
-
-fonte: Arial
-paragrafos: 20px
-Vatagens Bikcraft: 64px
-
-# Tamanhos
-
-conteúdo principal: maximo 1000px */
-
 body {
 	margin: 0;
 	font-family: Arial, Helvetica, sans-serif;
@@ -27,6 +11,7 @@ body {
 
 img {
 	max-width: 100%;
+	display: block;
 }
 
 a {
@@ -38,71 +23,6 @@ a {
 	text-transform: uppercase;
 }
 
-.menu {
-	display: flex;
-	justify-content: center;
-	gap: 20px;
-}
-
-.conteudo {
-	width: 1000px;
-	max-height: 1000px;
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-}
-
-.conteudo img {
-	border-top-right-radius: 5px;
-}
-
-.botao {
-	background: #ee2211;
-	color: #fff;
-}
-
-p {
-	font-size: 20px;
-}
-
-.subtitulo {
-	color: #c6c6c6;
-	font-size: 64px;
-	padding: 40px;
-	display: grid;
-	text-align: right;
-}
-
-.introducao {
-	background: #fff;
-	padding: 40px;
-	text-align: right;
-	display: grid;
-	gap: 20px;
-	justify-items: end;
-	align-content: center;
-	border-top-left-radius: 5px;
-}
-
-.vantagens {
-	padding: 40px;
-	gap: 20px;
-	background: #fff;
-	border-bottom-right-radius: 5px;
-}
-
-.vantagens-items {
-	padding: 20px;
-	display: grid;
-	grid-template-columns: auto 1fr;
-	gap: 10px 20px;
-	/* background-color: #f90; */
-	align-items: center;
-}
-
-.vantagens-items p {
-	grid-column: 2;
-}
-
 p,
 h1,
 h2,
@@ -110,10 +30,88 @@ h3 {
 	margin: 0px;
 }
 
-.rodape {
+p {
+	font-size: 20px;
+	line-height: 1.3;
+}
+
+.menu {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 20px;
+}
+
+.conteudo {
+	max-width: 1000px;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+}
+
+
+.introducao {
+	background: #fff;
 	padding: 40px;
+	text-align: right;
+	display: grid;
+	gap: 20px;
+	align-content: center;
+	justify-items: end;
+	border-top-left-radius: 5px;
+	position: relative;
+}
+
+.detalhe {
+	width: 60px;
+	height: 4px;
+	background: #e21;
+	position: absolute;
+	top: 30px;
+	right: -30px;
+}
+
+.botao {
+	background: #e21;
+	color: #fff;
+}
+
+.conteudo img {
+	border-top-right-radius: 5px;
+}
+
+.subtitulo {
+	color: #c6c6c6;
+	font-size: 64px;
+	padding: 40px;
+	align-self: center;
+	text-align: right;
+	text-transform: uppercase;
+}
+
+
+.vantagens {
+	background: #fff;
+	padding: 40px;
+	gap: 20px;
+	border-bottom-right-radius: 5px;
+}
+
+.vantagens-items {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	padding: 20px;
+	gap: 10px 20px;
+	align-items: center;
+}
+
+.vantagens-items p {
+	grid-column: 2;
+}
+
+.rodape {
 	background: #fff;
 	width: 100%;
+	padding: 40px;
 	text-align: center;
 	box-sizing: border-box;
 }
