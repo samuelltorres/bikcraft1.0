@@ -14,7 +14,6 @@ img {
 	display: block;
 }
 
-
 p,
 h1,
 h2,
@@ -42,11 +41,12 @@ ul {
 .menu {
 	display: flex;
 	flex-wrap: wrap;
-	gap: 1.25rem;
+	gap: 20px;
 	justify-content: center;
 }
 
 a {
+	display: block;
 	background: #fff;
 	text-decoration: none;
 	padding: 1rem 2rem;
@@ -82,8 +82,8 @@ a {
 	font-size: 2rem;
 }
 
-.introducao::before{
-	content: "";
+.introducao::before {
+	content: '';
 	width: 3.75rem;
 	height: 0.25rem;
 	background: #e21;
@@ -91,7 +91,6 @@ a {
 	top: 2rem;
 	right: -1.85rem;
 }
-
 
 .botao {
 	background: #e21;
@@ -102,8 +101,10 @@ a {
 	background: #900;
 }
 
-.conteudo img {
+.introducao-cover img {
 	border-top-right-radius: 0.3rem;
+	height: 100%;
+	object-fit: cover;
 }
 
 .subtitulo {
@@ -113,7 +114,7 @@ a {
 	align-self: center;
 	text-align: right;
 	text-transform: uppercase;
-	background-image: url("./img/onda.svg");
+	background-image: url('./img/onda.svg');
 }
 
 .vantagens {
@@ -130,11 +131,16 @@ a {
 	gap: 0.625rem 1.25rem;
 	align-items: center;
 	border-left: 4px solid transparent;
-
+	/* word-break: break-all; */
 }
 
 .vantagens-items p {
 	grid-column: 2;
+}
+
+.vantagens-items img {
+	width: 24px;
+	height: 24px;
 }
 
 .vantagens-items:hover {
@@ -153,4 +159,88 @@ a {
 	box-sizing: border-box;
 }
 
+@media (max-width: 1000px) {
+	.conteudo-vantagens {
+		grid-template-columns: 1fr;
+	}
 
+	.subtitulo {
+		text-align: center;
+	}
+
+	.introducao {
+		border-top-left-radius: 0;
+	}
+
+	.introducao-cover img {
+		border-top-right-radius: 0;
+	}
+
+	.vantagens {
+		border-bottom-right-radius: 0;
+	}
+}
+
+@media (max-width: 604px) {
+	.conteudo {
+		max-width: 604px;
+		display: grid;
+		grid-template-columns: 1fr;
+	}
+
+	.introducao {
+		justify-items: center;
+		text-align: center;
+	}
+
+	.introducao::before {
+		height: 3.75rem;
+		width: 0.25rem;
+		top: 16.2rem;
+		left: 2rem;
+	}
+	.menu {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		justify-content: space-evenly;
+	}
+
+	header {
+		gap: 30px;
+	}
+
+	body {
+		gap: 30px;
+	}
+
+	.subtitulo {
+		padding: 2.5rem 1rem;
+		font-size: 3rem;
+	}
+}
+
+@media (max-width: 490px) {
+	.introducao::before {
+		display: none;
+	}
+	.subtitulo {
+		font-size: 2rem;
+		padding: 2.5rem 0rem;
+	}
+	.vantagens {
+		padding: 40px 0px;
+	}
+}
+
+@media (max-width: 320px) {
+	.subtitulo {
+		font-size: 1rem;
+		padding: 2.5rem 0;
+	}
+	.vantagens {
+		padding: 40px 0px;
+	}
+	p {
+		font-size: 1rem;
+	}
+}
